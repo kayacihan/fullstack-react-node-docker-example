@@ -2,9 +2,13 @@ require('dotenv').config();
 const express = require('express');
 const connect = require('./config/connect')
 const Coffee = require('./models/coffee')
+const controller = require('./controllers/db_operations')
+
+
 const cors = require('cors')
 
 const app = express();
+
 
 //middleware
 app.use(cors())
@@ -13,7 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.post('/coffee', async (req, res) => {
     const myCoffee = req.body
-    const coffee = await Coffee.create(myCoffee)
+    const coffee = await controller.createCoffee(myCoffee)
     res.status(201).json(coffee.toJSON())
 })
 

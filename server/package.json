@@ -25,6 +25,17 @@
     "mongoose": "^5.12.4"
   },
   "devDependencies": {
+    "cuid": "^2.1.8",
     "jest": "^26.6.3"
+  },
+  "jest": {
+    "verbose": true,
+    "testURL": "http://localhost:9879/",
+    "testEnvironment": "node",
+    "setupTestFrameworkScriptFile": "<rootDir>/testconfig.js",
+    "restoreMocks": true,
+    "testPathIgnorePatterns": [
+      "dist/"
+    ]
   }
 }
