@@ -1,6 +1,6 @@
 FROM node:12
 # Create app directory
-WORKDIR /usr/src/server3
+WORKDIR /usr/src/server
 # Install app dependencies
 COPY package*.json ./
 RUN npm install
