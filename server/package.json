@@ -1,0 +1,29 @@
+{
+  "name": "fullstack-react-node-docker-example",
+  "version": "1.0.0",
+  "description": "Fullstack Coffee Types App Example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prod": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kayacihan/fullstack-react-node-docker-example.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kayacihan/fullstack-react-node-docker-example/issues"
+  },
+  "homepage": "https://github.com/kayacihan/fullstack-react-node-docker-example#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.4"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
