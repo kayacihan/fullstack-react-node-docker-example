@@ -16,10 +16,10 @@ services:
         container_name: node_api-7
         build: ./server
         ports:
-            - "4444:3004"
+            - "3004:3004"
         volumes:
             - ./server:/usr/src/server
-            # - ./server/dist:/usr/src/server/dist
+            - ./server/dist:/usr/src/server/dist
         links:
             - mongo
         networks:
