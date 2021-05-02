@@ -26,7 +26,7 @@ const getCoffeeById = async (id) => {
     const data = await Coffee.findById(id)
     return data
   } catch (err) {
-    return { error: err };
+    return { error: "Resource Not Found" };
   }
 }
 
