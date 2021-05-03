@@ -33,6 +33,22 @@ services:
         networks:
             - gotoappnetwork
 
+
+    mongo-seed:
+        build: .
+        environment:
+        - MONGODB_HOST=mongo
+        - MONGODB_PORT=27017
+        volumes:
+        - ./db-seed:/data
+        depends_on:
+        - mongo
+        networks:
+            - gotoappnetwork        
+        command: [ "mongoimport --host mongo --port 27017 --db coffeedb --mode upsert --type json --file /data/coffees.json --jsonArray" ]        
+
+
+
 networks:
     gotoappnetwork:
         driver: bridge
