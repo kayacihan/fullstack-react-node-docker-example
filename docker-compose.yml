@@ -45,7 +45,7 @@ services:
         - mongo
         networks:
             - gotoappnetwork        
-        command: [ "mongoimport --host mongo --port 27017 --db coffeedb --mode upsert --type json --file /data/coffees.json --jsonArray" ]        
+        command: [ "mongoimport --host mongo --port 27017 --db coffee --mode upsert --type json --file /data/coffees.json --jsonArray" ]        
 
 
 
